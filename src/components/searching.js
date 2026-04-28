@@ -1,11 +1,15 @@
-import {rules, createComparison} from "../lib/compare.js";
-
-
 export function initSearching(searchField) {
-    // @todo: #5.1 — настроить компаратор
 
-    return (data, state, action) => {
-        // @todo: #5.2 — применить компаратор
-        return data;
-    }
+    return (query, state, action) => {
+
+        const value = state?.[searchField];
+
+        // если поле пустое — ничего не добавляем
+        if (!value) return query;
+
+        return {
+            ...query,
+            search: value
+        };
+    };
 }
