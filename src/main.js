@@ -43,10 +43,7 @@ function collectState() {
 /**
  * SEARCH
  */
-const applySearching = initSearching(
-    sampleTable.search.elements,
-    'search'
-);
+const applySearching = initSearching('search');
 
 /**
  * FILTER

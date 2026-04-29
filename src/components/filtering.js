@@ -26,7 +26,7 @@ export function initFiltering(elements, indexes) {
             const field = action.dataset.field;
 
             const wrapper = action.closest('label') || action.parentElement;
-            const input = wrapper.querySelector('input, select');
+            const input = wrapper.querySelector('input');
 
             if (input) input.value = '';
             if (state[field] !== undefined) state[field] = '';
